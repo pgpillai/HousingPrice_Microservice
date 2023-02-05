@@ -56,7 +56,11 @@ stages:
         archiveType: zip
         archiveFile: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
         replaceExistingArchive: true
-- stage: Deploy
+
+    - upload: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
+      displayName: 'myStep 5 - Upload package'
+      artifact: drop
+  - stage: Deploy
   displayName: 'Deploy Web App'
   dependsOn: Build
   condition: succeeded()
@@ -74,7 +78,4 @@ stages:
               azureSubscription: $(azureServiceConnectionId)
               appName: $(webAppName)
               package: $(Pipeline.Workspace)/drop/$(Build.BuildId).zip
-    - upload: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
-      displayName: 'myStep 5 - Upload package'
-      artifact: drop
  
