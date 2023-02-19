@@ -4,7 +4,7 @@
 
 # Overview
 
-<TODO: complete this with an overview of your project>
+HousingPrice_Microservice is a ML project which predicts the housing price based on trained model, in this project we focused only on Continuous Integration and Continuous Delivery pipeline. We will be using the Azure DevOps pipeline Project for build and release/deployment using a Azure webapp for python flask based app and a pre trained model.
 
 ## Project Plan
 The link for the Plan spreadsheet
@@ -16,8 +16,12 @@ https://docs.google.com/spreadsheets/d/12iEFXMM9TGLkD0P91e5AF7EikzzWjlo28430Mp0y
 
 ## Instructions
 
-<TODO:  
+  
 * Architectural Diagram (Shows how key parts of the system work)>
+![image](https://user-images.githubusercontent.com/84101851/219969946-65bd1f8b-4e1f-45d2-a12f-3133562312e0.png)
+
+Code resides in Git repository, Azure Devops-pipeline is configured to build and deploy the ML app to microsoft webapp.
+
 
 <TODO:  Instructions for running the Python project.  How could a user with no context run this project without asking you for any help.  Include screenshots with explicit steps to create that work. Be sure to at least include the following screenshots:
 
