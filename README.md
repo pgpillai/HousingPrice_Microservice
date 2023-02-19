@@ -49,14 +49,14 @@ az webapp up -n <your-appservice> , where your-appservice is a unique name for y
  
 <img width="1393" alt="Screenshot 2023-02-19 at 3 06 02 PM" src="https://user-images.githubusercontent.com/84101851/219972578-6dc0852b-bb07-4268-b869-26a3f07ceb77.png">
 
-* Successful prediction from deployed flask app in Azure Cloud Shell.  [Use this file as a template for the deployed prediction](https://github.com/udacity/nd082-Azure-Cloud-DevOps-Starter-Code/blob/master/C2-AgileDevelopmentwithAzure/project/starter_files/flask-sklearn/make_predict_azure_app.sh).
+* Successful prediction from deployed flask app in Azure Cloud Shell. 
+ Change the line in make_predict_azure_app.sh to match the deployed prediction -X POST https://<yourappname>.azurewebsites.net:$PORT/predict
+ 
 The output should look similar to this:
 
-```bash
+<img width="873" alt="Screenshot 2023-02-19 at 3 26 30 PM" src="https://user-images.githubusercontent.com/84101851/219973428-01ba3c0d-22c0-434c-a2d9-e01ebc3c3526.png">
+
 udacity@Azure:~$ ./make_predict_azure_app.sh
-Port: 443
-{"prediction":[20.35373177134412]}
-```
 
 * Output of streamed log files from deployed application
 Run the following command 
