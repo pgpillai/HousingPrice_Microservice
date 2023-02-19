@@ -11,7 +11,8 @@ The link for the Plan spreadsheet
 https://docs.google.com/spreadsheets/d/12iEFXMM9TGLkD0P91e5AF7EikzzWjlo28430Mp0y56k/edit?usp=sharing
 
 * A link to a Trello board for the project
-* A link to a spreadsheet that includes the original and final project plan>
+ https://trello.com/b/6lpeh9z3/ml-predict-api
+
 
 ## Instructions
 
