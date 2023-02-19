@@ -23,19 +23,31 @@ https://docs.google.com/spreadsheets/d/12iEFXMM9TGLkD0P91e5AF7EikzzWjlo28430Mp0y
 Code resides in Git repository, Azure Devops-pipeline is configured to build and deploy the ML app to microsoft webapp.
 
 
-<TODO:  Instructions for running the Python project.  How could a user with no context run this project without asking you for any help.  Include screenshots with explicit steps to create that work. Be sure to at least include the following screenshots:
-
-* Project running on Azure App Service
+Instructions for running the Python project.  How could a user with no context run this project without asking you for any help.  Include screenshots with explicit steps to create that work. Be sure to at least include the following screenshots:
+* Setup Cloudshell 
+Login to Azure Portal and Click on the Cloudsheell on the right top as shown in the screenshot
+<img width="1108" alt="Screenshot 2023-02-19 at 2 37 16 PM" src="https://user-images.githubusercontent.com/84101851/219971148-d711b4db-4ef0-4373-af32-b1dc6c43e73d.png">
 
 * Project cloned into Azure Cloud Shell
+ Clone the project in this repository to the CloudShell
+  <img width="877" alt="Git-Clone-From-Cloudshell" src="https://user-images.githubusercontent.com/84101851/219971221-77bb083f-bfd2-4a8c-a5d6-11276e2370f4.png">
 
 * Passing tests that are displayed after running the `make all` command from the `Makefile`
+<img width="1413" alt="Screenshot_testcase_passed" src="https://user-images.githubusercontent.com/84101851/219971919-fe69551c-fc9d-4dd4-ac79-2d5434b46c06.png">
 
-* Output of a test run
+* On the Cloud shell run the following command
+az webapp up -n <your-appservice> , where your-appservice is a unique name for your service.
+ 
+* Check the app running, go to URL https://<your-appservice>.azurewebsites.net/, you will see a screenshot as below
+ <img width="482" alt="Screenshot 2023-02-19 at 3 04 08 PM" src="https://user-images.githubusercontent.com/84101851/219972360-b6134765-9f31-4582-a451-ee4e1c56078b.png">
 
 * Successful deploy of the project in Azure Pipelines.  [Note the official documentation should be referred to and double checked as you setup CI/CD](https://docs.microsoft.com/en-us/azure/devops/pipelines/ecosystems/python-webapp?view=azure-devops).
+ Setup Azure pipeline and deploying the app automaticall from azure pipeline is shown in the demo video.
 
 * Running Azure App Service from Azure Pipelines automatic deployment
+ Clieck on deployments on the azure portal and you will see the webapp deployed and it shows the Git Repo.
+ 
+<img width="1393" alt="Screenshot 2023-02-19 at 3 06 02 PM" src="https://user-images.githubusercontent.com/84101851/219972578-6dc0852b-bb07-4268-b869-26a3f07ceb77.png">
 
 * Successful prediction from deployed flask app in Azure Cloud Shell.  [Use this file as a template for the deployed prediction](https://github.com/udacity/nd082-Azure-Cloud-DevOps-Starter-Code/blob/master/C2-AgileDevelopmentwithAzure/project/starter_files/flask-sklearn/make_predict_azure_app.sh).
 The output should look similar to this:
@@ -47,12 +59,14 @@ Port: 443
 ```
 
 * Output of streamed log files from deployed application
-
+Run the following command 
+ ```
+ az webapp log tail --resource-group HousingPrice_ML_RG --name housing02052023
+ ````
 > 
+Output will be like as shown here
+ <img width="1362" alt="Screenshot 2023-02-19 at 3 11 39 PM" src="https://user-images.githubusercontent.com/84101851/219972744-6cb60312-e7e9-4c23-b826-1a213b12995f.png">
 
-## Enhancements
-
-<TODO: A short description of how to improve the project in the future>
 
 ## Demo 
 
