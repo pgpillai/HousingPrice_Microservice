@@ -43,6 +43,9 @@ az webapp up -n <your-appservice> , where your-appservice is a unique name for y
 
 * Successful deploy of the project in Azure Pipelines.  [Note the official documentation should be referred to and double checked as you setup CI/CD](https://docs.microsoft.com/en-us/azure/devops/pipelines/ecosystems/python-webapp?view=azure-devops).
  Setup Azure pipeline and deploying the app automaticall from azure pipeline is shown in the demo video.
+ On the Demo video 
+  * first 9 minutes is the set up
+  * finanal 5 min will be the demo of CI/CD
 
 * Running Azure App Service from Azure Pipelines automatic deployment
  Clieck on deployments on the azure portal and you will see the webapp deployed and it shows the Git Repo.
@@ -70,6 +73,6 @@ Output will be like as shown here
 
 ## Demo 
 
-<TODO: Add link Screencast on YouTube>
+https://www.youtube.com/watch?v=lw3pzBM9VWU
 
 
